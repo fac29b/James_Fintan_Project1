@@ -7,9 +7,9 @@
 :root {
     /* site colors */
     --background-color: #F5F5F5;
-    --primary-color:  #00A398;
+    --primary-color: #00A398;
     --secondary-color: #FFA500;
-    --accent-color:  #009B72;
+    --accent-color: #009B72;
 
     /* fonts */
     /* FONTS WILL REQUIRE STYLE LINKS TO BE ADDED TO HTML */
@@ -22,9 +22,26 @@
     --center-element: 0 auto;
     /* use on width property */
     --max-width: 80%
-
 }
 
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--body-font);
+    width: var(--max-width);
+    margin: var(--center-element);
+    background-color: var(--background-color);
+
+}
+
+/* HEADING SIZES */
+
+h1 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-align: center;
 }
