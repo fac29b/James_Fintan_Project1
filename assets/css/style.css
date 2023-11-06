@@ -4,6 +4,27 @@
     box-sizing: border-box;
 }
 
+:root {
+    /* site colors */
+    --background-color: #F5F5F5;
+    --primary-color:  #00A398;
+    --secondary-color: #FFA500;
+    --accent-color:  #009B72;
+
+    /* fonts */
+    /* FONTS WILL REQUIRE STYLE LINKS TO BE ADDED TO HTML */
+    --hero-font: "Amatic SC";
+    --header-font: "Josefin Sans";
+    --body-font: Quicksand, roboto, arial;
+
+    /*width options*/
+    /* use on margin property, it center aligns elements*/
+    --center-element: 0 auto;
+    /* use on width property */
+    --max-width: 80%
+
+}
+
 body {
     font-family: 'Courier New', Courier, monospace;
 }
