@@ -21,15 +21,23 @@
     /* use on margin property, it center aligns elements*/
     --center-element: 0 auto;
     /* use on width property */
-    --max-width: 80%
+    --max-width: 1000px;
+    --width: 80%;
 }
+
+/* GENERAL PAGE STYLING */
 
 body {
     font-family: var(--body-font);
-    width: var(--max-width);
-    margin: var(--center-element);
     background-color: var(--background-color);
+    
+}
 
+section {
+    padding-block: 3rem;
+    width: var(--width);
+    max-width: var(--max-width);
+    margin: var(--center-element);
 }
 
 /* HEADING SIZES */
@@ -45,3 +53,38 @@ h2 {
     color: var(--primary-color);
     text-align: center;
 }
+
+/* TEAM SECTION */
+
+.profiles__title {
+    padding-bottom: 1rem;
+}
+
+.team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.team__member {
+    /* border: solid 3px var(--accent-color); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: auto;
+    gap: 1rem;
+    padding-block: .5rem;
+    background-color: var(--background-color);
+}
+
+.team__pic,
+.team__profile {
+    width: 100%;
+}
+
+.team__pic {
+    border: 10px solid var(--secondary-color);
+    border-radius: 10%;
+    background-color: var(--background-color);
+}
+
