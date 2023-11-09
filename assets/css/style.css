@@ -13,7 +13,7 @@
 
     /* fonts */
     /* FONTS WILL REQUIRE STYLE LINKS TO BE ADDED TO HTML */
-    --hero-font: "Amatic SC";
+    --hero-font: Amatic SC;
     --header-font: "Josefin Sans";
     --body-font: Quicksand, roboto, arial;
 
@@ -30,7 +30,7 @@
 body {
     font-family: var(--body-font);
     background-color: var(--background-color);
-    
+
 }
 
 section {
@@ -53,6 +53,70 @@ h2 {
     color: var(--primary-color);
     text-align: center;
 }
+
+/* NAVBAR */
+
+header {
+    padding-block: 2rem;
+    width: var(--width);
+    max-width: var(--max-width);
+    margin: var(--center-element);
+}
+
+nav>p {
+    font-family: var(--hero-font);
+    color: var(--secondary-color);
+    font-size: 4rem;
+    font-weight: bolder;
+    padding: 0.5rem;
+}
+
+nav>p>span {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+nav>ul {
+    margin-left: auto;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+nav>ul>li {
+    margin: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+nav>ul>li>a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+nav>ul>li>a:hover {
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    border-radius: 10%;
+    color: var(--secondary-color);
+    font-weight: bolder;
+    padding: 0.5rem;
+}
+
+
+
 
 /* TEAM SECTION */
 
@@ -87,4 +151,3 @@ h2 {
     border-radius: 10%;
     background-color: var(--background-color);
 }
-
