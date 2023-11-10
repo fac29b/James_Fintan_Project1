@@ -115,9 +115,6 @@ nav>ul>li>a:hover {
     padding: 0.5rem;
 }
 
-
-
-
 /* TEAM SECTION */
 
 .profiles__title {
@@ -131,23 +128,42 @@ nav>ul>li>a:hover {
 }
 
 .team__member {
-    /* border: solid 3px var(--accent-color); */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    flex-basis: auto;
+    justify-content: flex-start;
     gap: 1rem;
-    padding-block: .5rem;
-    background-color: var(--background-color);
+    padding-block: 0.5rem;
+    background-color: white;
+    border-radius: 30px ;
 }
 
 .team__pic,
-.team__profile {
+.team__profile,
+.team__name,
+.team__role {
     width: 100%;
+    padding: 0.5rem;
 }
 
 .team__pic {
-    border: 10px solid var(--secondary-color);
-    border-radius: 10%;
-    background-color: var(--background-color);
+    border-radius: 30px;
+    padding-top: 0;
+}
+
+.team__name {
+    font-family: var(--hero-font);
+    color: var(--secondary-color);
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.team__name > span {
+    color: var(--primary-color);
+    font-size: 2.5rem
+}
+
+.team__role {
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: var(--accent-color);
 }
