@@ -34,7 +34,7 @@ body {
 }
 
 section {
-    padding-block: 3rem;
+    padding-block: 1.5rem;
     width: var(--width);
     max-width: var(--max-width);
     margin: var(--center-element);
@@ -115,6 +115,32 @@ nav>ul>li>a:hover {
     padding: 0.5rem;
 }
 
+/* HERO SECTION */
+
+.hero,
+.hero__image {
+    width: 100%;
+    max-width: 100%;
+    align-self: center;
+}
+
+.hero {
+    position: relative;
+    padding-top: 0;
+}
+
+.hero__text {
+    width: 100%;
+    position: absolute;
+    margin-top: 2%;
+    text-align: center;
+    font-family: var(--header-font);
+    color: white;
+    font-weight: 900;
+    font-size: clamp(1rem, 3vw, 4rem);
+    text-shadow: 0 1px 0 black;
+}
+
 /* TEAM SECTION */
 
 .profiles__title {
@@ -167,3 +193,11 @@ nav>ul>li>a:hover {
     font-size: 1.5rem;
     color: var(--accent-color);
 }
+
+/* DESKTOP RESPONSIVE */
+
+/* @media only screen and (min-width: 600px) {
+    .hero__text {
+        margin-top: 37%;
+    }
+  } */
