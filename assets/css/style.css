@@ -151,3 +151,125 @@ nav>ul>li>a:hover {
     border-radius: 10%;
     background-color: var(--background-color);
 }
+
+/* FORM */
+
+.hide {
+    display: none;
+}
+
+.contact__title {
+    padding-bottom: 1rem;
+}
+
+form {
+    background-color: var(--background-color);
+    padding: 1.75rem;
+    border-radius: 0.5rem;
+    border: solid 0.3rem var(--secondary-color);
+}
+
+.form__border_validate {
+    border: solid 0.3rem var(--primary-color);
+}
+
+label {
+    display: block;
+    margin: 0.5rem;
+}
+
+
+input:focus,
+textarea:focus {
+    border: 0.1rem solid var(--secondary-color);
+    outline: none;
+}
+
+.validate__input {
+    border: 0.1rem solid var(--primary-color) !important;
+    outline: none !important;
+}
+
+
+input,
+textarea {
+    width: 91%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.33rem;
+    box-sizing: border-box;
+}
+
+input,
+textarea {
+    width: 91%;
+    padding: 0.5rem;
+    margin-bottom: 0;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.33rem;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+    border: 0.1rem solid var(--secondary-color);
+    outline: none;
+}
+
+.validate__input {
+    border: 0.1rem solid var(--primary-color) !important;
+    outline: none !important;
+}
+
+.tick {
+    color: var(--primary-color);
+    text-align: center;
+    margin: 0.4rem;
+    margin-bottom: 50%;
+    padding: 0.4rem;
+    font-size: 1.2rem;
+    position: relative;
+    top: 50%;
+
+}
+
+.error {
+    color: var(--secondary-color);
+    text-align: center;
+    margin: 0.4rem;
+    padding: 0.4rem;
+    font-size: 1.2rem;
+}
+
+
+.error-message {
+    color: var(--secondary-color);
+}
+
+input[type="submit"] {
+    font-size: 1.2rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: 0.5s;
+    width: 100%;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    scale: 102%;
+}
+
+
+#message-sent {
+    text-align: center;
+    padding: 0.4rem;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
