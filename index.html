@@ -156,8 +156,30 @@
     <!-- CONTACT -->
 
     <section id="contact">
-        <h2>Contact</h2>
-        <form></form>
+        <h2 class="contact__title">Contact</h2>
+        <form action="#" method="post" id="contact-submit">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <span id="nameTick" class="tick"></span>
+
+            <label for="company">Company Name:</label>
+            <input type="text" id="company" name="company" required>
+            <span id="companyTick" class="tick"></span>
+
+            <label for="email">Email: <span id="emailErrorMessage" class="error-message"></span></label>
+            <input type="email" id="email" name="email" required>
+            <span id="emailTick" class="tick"></span>
+            <span id="emailError" class="error"></span>
+
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <span id="messageTick" class="tick"></span>
+
+            <input type="submit" value="Submit" onvalid="this.setCustomValidity('')">
+
+            <p class="hide" id="message-sent">✔ Message successfully sent! ✔</p>
+        </form>
     </section>
 
     <footer>
