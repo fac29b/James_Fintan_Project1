@@ -96,3 +96,29 @@ function validateForm() {
 
 contactSubmit.addEventListener('keyup', validateForm);
 contactSubmit.addEventListener('input', validateForm);
+
+// TESTIMONIALS
+// Scrolling animation loop from Kevin Powell tut https://www.youtube.com/watch?v=iLmBy-HKIAw
+
+const testimonials = document.querySelectorAll(".testimonials");
+
+//CHECKS IF USER HAS 'PREFERS REDUCED MOTION' ENABLED
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    addScrolling();
+}
+
+function addScrolling() {
+    testimonials.forEach(testimonial => {
+        testimonial.setAttribute("data-animated", true)
+
+        const testimonialsScroll = testimonial.querySelector('.testimonials__scroll');
+        const testimonialContent = Array.from(testimonialsScroll.children);
+
+        testimonialContent.forEach(item => {
+            let duplicatedCard = item.cloneNode(true);
+            // ensures duplicated content is not read out twice by screen readers
+            duplicatedCard.setAttribute('aria-hidden', true);
+            testimonialsScroll.appendChild(duplicatedCard);
+        })
+    });
+}
