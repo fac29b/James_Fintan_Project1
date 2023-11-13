@@ -234,7 +234,7 @@ nav>ul>li>a:hover {
 
 .testimonials[data-animated=true] .testimonials__scroll {
     display: flex;
-    animation: scroll 20s linear infinite;
+    animation: scroll 23s linear infinite;
 }
 
 .testimonials[data-animated=true] .testimonials__card {
@@ -368,4 +368,31 @@ input[type="submit"]:hover {
     font-size: 1.2rem;
     font-weight: bold;
     margin-top: 0.5rem;
+}
+
+/* FOOTER */
+
+footer {
+    font-size: .8rem;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    width: var(--width);
+    max-width: var(--max-width);
+    margin: var(--center-element);
+}
+
+.links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.links > ul {
+    list-style: none;
+}
+
+.links ul> li > img {
+    max-width: 2rem;
 }
