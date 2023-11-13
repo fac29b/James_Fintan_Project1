@@ -194,6 +194,60 @@ nav>ul>li>a:hover {
     color: var(--accent-color);
 }
 
+/* TESTIMONIALS */
+
+.testimonials__about > p {
+    padding-block: 1rem;
+}
+
+.testimonials__about > h3 {
+    text-align: center;
+    font-family: var(--hero-font);
+    color: var(--primary-color);
+    font-size: 2rem;
+    padding-block: 1rem;
+}
+
+/* DEFAULT STYLE IF USER HAS PREFERS REDUCED MOTION ENABLED */
+.testimonials__scroll {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.testimonials__card {
+    outline: solid 3px var(--accent-color);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* SCROLLING ANIMATION IF USER HAS NOT ENABLED PREFERS REDUCED MOTION */
+/* Scrolling animation loop from Kevin Powell tut https://www.youtube.com/watch?v=iLmBy-HKIAw */
+.testimonials[data-animated=true] {    
+    overflow: hidden;
+}
+
+.testimonials[data-animated=true] .testimonials__scroll {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+
+.testimonials[data-animated=true] .testimonials__card {
+    min-width: 15rem;
+}
+
+@keyframes scroll {
+    to {
+        /* calc is compensating for the 1rem gap that is part of the flex container */
+        transform: translateX(calc(-150% - 2.2rem));
+    }
+}
+
 /* FORM */
 
 .hide {
