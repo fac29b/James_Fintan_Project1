@@ -225,6 +225,11 @@ nav>ul>li>a:hover {
     align-items: center;
 }
 
+.testimonials__card > p:first-of-type {
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
 /* SCROLLING ANIMATION IF USER HAS NOT ENABLED PREFERS REDUCED MOTION */
 /* Scrolling animation loop from Kevin Powell tut https://www.youtube.com/watch?v=iLmBy-HKIAw */
 .testimonials[data-animated=true] {    
