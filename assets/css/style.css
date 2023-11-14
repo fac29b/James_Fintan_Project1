@@ -196,11 +196,11 @@ nav>ul>li>a:hover {
 
 /* TESTIMONIALS */
 
-.testimonials__about > p {
+.testimonials__about>p {
     padding-block: 1rem;
 }
 
-.testimonials__about > h3 {
+.testimonials__about>h3 {
     text-align: center;
     color: var(--primary-color);
     font-size: 1.8rem;
@@ -225,14 +225,14 @@ nav>ul>li>a:hover {
     align-items: center;
 }
 
-.testimonials__card > p:first-of-type {
+.testimonials__card>p:first-of-type {
     font-style: italic;
     font-size: 1.2rem;
 }
 
 /* SCROLLING ANIMATION IF USER HAS NOT ENABLED PREFERS REDUCED MOTION */
 /* Scrolling animation loop from Kevin Powell tut https://www.youtube.com/watch?v=iLmBy-HKIAw */
-.testimonials[data-animated=true] {    
+.testimonials[data-animated=true] {
     overflow: hidden;
 }
 
@@ -290,20 +290,9 @@ textarea:focus {
     outline: none !important;
 }
 
-
 input,
 textarea {
-    width: 91%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 0.1rem solid #ccc;
-    border-radius: 0.33rem;
-    box-sizing: border-box;
-}
-
-input,
-textarea {
-    width: 91%;
+    width: 95%;
     padding: 0.5rem;
     margin-bottom: 0;
     border: 0.1rem solid #ccc;
@@ -353,12 +342,18 @@ input[type="submit"] {
     color: var(--primary-color);
     cursor: pointer;
     transition: 0.5s;
-    width: 100%;
+    width: 95%;
     font-weight: bold;
     margin-top: 1rem;
 }
 
 input[type="submit"]:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    scale: 102%;
+}
+
+input[type="submit"]:focus {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     scale: 102%;
@@ -394,7 +389,7 @@ footer {
     gap: 1rem;
 }
 
-.links > ul {
+.links>ul {
     list-style: none;
 }
 
