@@ -6,8 +6,9 @@
 
 :root {
     /* site colors */
+    --site-color: #fff;
     --background-color: #F5F5F5;
-    --primary-color: #00A398;
+    --primary-color: #24847C;
     --secondary-color: #FFA500;
     --accent-color: #009B72;
 
@@ -25,12 +26,31 @@
     --width: 80%;
 }
 
+.darkmode {
+    --site-color: #24847C;
+    --background-color: #009B72;
+    --primary-color: #F5F5F5;
+    --secondary-color: #FFA500;
+    --accent-color: #009B72;
+}
+
+.monochromemode {
+    --site-color: white;
+    --background-color: lightgrey;
+    --primary-color: black;
+    --secondary-color: slategrey;
+    --accent-color: black;
+}
+
 /* GENERAL PAGE STYLING */
 
 body {
     font-family: var(--body-font);
     background-color: var(--background-color);
+}
 
+body.darkmode {
+    color: var(--primary-color);
 }
 
 section {
@@ -115,6 +135,62 @@ nav>ul>li>a:hover {
     padding: 0.5rem;
 }
 
+/* ACCESSIBILITY MENU */
+
+.accessibility {
+    /* maintains the icon and menu in same position regardless of scrolling */
+    position: sticky;
+    /* removes the elements from the float to stop it effecting layout */
+    float: left;
+    top: 1rem;
+    margin-left: 1rem;
+    z-index: 99;
+    width: 4rem;
+}
+
+.accessibility__icon {
+    border: none;
+    border-radius: 25%;
+    background-image: url("/images/eye-regular.svg");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 100%;
+    height: clamp(2rem, 2.5rem, 4rem);
+}
+
+.accessibility__icon:hover {
+    cursor: pointer;
+    background-image: url("/images/eye-solid.svg");
+}
+
+.accessibility__menu {
+    position: absolute;
+    list-style: none;
+    transform: translate(-145px, 5px);
+    transition: 300ms ease-in-out 400ms;
+}
+
+.accessibility__menu[data-open='true'] {
+    position: absolute;
+    transform: translate(-10px, 5px);
+}
+
+.accessibility__button {
+    background-color: white;
+    text-align: left;
+    font-size: 1rem;
+    padding: 3px;
+    margin-bottom: 3px;
+    width: 8rem;
+    border: solid 3px black;
+    transition: 100ms ease-in 100ms;
+}
+
+.accessibility__button:hover {
+    background-color: black;
+    color: white;
+}
+
 /* HERO SECTION */
 
 .hero,
@@ -159,7 +235,7 @@ nav>ul>li>a:hover {
     justify-content: flex-start;
     gap: 1rem;
     padding-block: 0.5rem;
-    background-color: white;
+    background-color: var(--site-color);
     border-radius: 30px;
 }
 
@@ -194,7 +270,21 @@ nav>ul>li>a:hover {
     color: var(--accent-color);
 }
 
+.team__role.darkmode,
+.team__profile.darkmode {
+    color: var(--secondary-color);
+}
+
 /* TESTIMONIALS */
+
+.testimonials__card.darkmode {
+    background-color: var(--primary-color);
+    color: black;
+}
+
+.testimonials__card.monochromemode {
+    background-color: var(--site-color);
+}
 
 .testimonials__about > p {
     padding-block: 1rem;
