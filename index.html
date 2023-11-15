@@ -12,7 +12,17 @@
 
 </head>
 
-<body>
+<body data-color-mode="none" id="test">
+    
+    <div class="accessibility">
+        <button class="accessibility__icon" onclick="openMenu()" aria-label="visual accessibility menu"></button>
+        <ul class="accessibility__menu" data-open="false">
+            <li><Button class="accessibility__button" onclick="enableMonochrome()">Black & White</Button></li>
+            <li><Button class="accessibility__button">High Contrast</Button></li>
+            <li><Button class="accessibility__button" onclick="enableDarkmode()">Darkmode</Button></li>
+            <li><Button class="accessibility__button" onclick="enableOriginal()">Original Design</Button></li>
+        </ul>
+    </div>
 
     <!-- NavBar -->
     <header>

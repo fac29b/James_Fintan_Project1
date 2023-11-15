@@ -122,3 +122,53 @@ function addScrolling() {
         })
     });
 }
+
+// ACCESSIBILITY MENU
+
+const accessibilityMenu = document.querySelector(".accessibility__menu");
+
+function openMenu() {
+    (accessibilityMenu.dataset.open === "true") ? accessibilityMenu.dataset.open="false" : accessibilityMenu.dataset.open="true";
+}
+
+//Code to add a colour choice feature
+// use local storage to save the dark-mode state user has chosen
+let colorMode = localStorage.getItem('colorMode');
+console.log(colorMode);
+
+
+const colorModeBody = Array.from(document.getElementsByTagName("body"));
+const colorModeTeamRole = Array.from(document.getElementsByClassName("team__role"));
+const colorModeTestimonials = Array.from(document.getElementsByClassName("testimonials__card"))
+const colorModeElements = colorModeBody.concat(colorModeTeamRole, colorModeTestimonials)
+
+//checks local storage to see what current colormode has been set
+switch(colorMode) {
+    case "darkMode":
+        enableDarkmode()
+        break;
+    case "monochromeMode":
+        enableMonochrome()
+        break;
+}
+
+function enableDarkmode() {
+    colorModeElements.forEach((item) => {item.classList.remove("monochromemode")});   
+    colorModeElements.forEach((item) => {item.classList.add("darkmode")});
+    //update current color mode in local storage
+    localStorage.setItem('colorMode', 'darkMode');
+}
+
+function enableOriginal() {
+    colorModeElements.forEach((item) => {item.classList.remove("darkmode", "monochromemode")});
+    localStorage.setItem('colorMode', null);
+}
+
+    function enableMonochrome() {
+        colorModeElements.forEach((item) => {item.classList.remove("darkmode")});
+        colorModeElements.forEach((item) => {item.classList.add("monochromemode")});  
+        localStorage.setItem('colorMode', 'monochromeMode');      
+}
+
+
+
